@@ -1,0 +1,13 @@
+input {
+  width: 450px;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  background: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+input:focus {
+  outline: none;
+}

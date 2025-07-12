@@ -1,0 +1,78 @@
+.dark-mode-style {
+    background-color: #121212;
+    
+}
+
+.dark-button {
+   
+    color: #ffffff !important;
+    background: none !important;
+    border: 1px solid #ffffff !important;
+}
+
+.dark-text {
+    color: #ffffff !important; 
+    background: none !important;
+}
+
+.dark-bars {
+    background-color: #ffffff !important; 
+   
+}
+
+.dark-search-button {
+    background-color: rgb(151, 151, 151) !important;
+    color: #ffffff !important;
+    border: 1px solid white !important;
+
+
+}
+
+
+
+.dark-input {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #ffffff !important;
+}
+
+button {
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(170, 170, 170) !important;
+    }
+}
+
+
+.dark-textarea {
+    color: white;
+}
+
+.dark-label {
+    color: white !important;
+}
+
+.dark-border {
+    border: 1px solid white !important;
+    color: white !important;
+}
+
+option {
+ background-color: #000000;
+ color: white;
+}
+
+
+.dark-box {
+    background-color: #ffffff !important;
+}
+
+
+.hot-slider-dots .hot-dot.dark-dot {
+  background-color: #ffffff; /* lighter dot color for dark mode */
+  border: 1px solid white;
+}
+
+.hot-slider-dots .hot-dot.dark-dot.active {
+  background-color: #ffffff !important; /* brighter active dot in dark mode */
+}

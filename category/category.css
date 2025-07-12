@@ -1,0 +1,25 @@
+@import "../index/index.css";
+@import '../styles/product-header.css';
+
+
+.navbar-container {
+    position: static;
+}
+
+.category-cards-title {
+    margin-top: 4rem;
+}
+.category-cards-container {
+  width: 100%;
+  height: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-family: 'poppins';
+  z-index: 2;
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+}

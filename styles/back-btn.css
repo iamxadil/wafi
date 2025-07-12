@@ -1,0 +1,17 @@
+
+.back-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 1 !important;
+    padding: 1rem 1.5rem;
+    color: rgb(53, 20, 201)
+}
+
+i {
+    font-size: 24px;
+    font-weight: 800;
+}

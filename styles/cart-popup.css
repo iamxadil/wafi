@@ -1,0 +1,101 @@
+.cart-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.774);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-popup-overlay.hidden {
+  display: none;
+}
+
+.cart-popup-box {
+
+  gap: 1rem ;
+  padding: 1rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.39);
+
+ 
+}
+
+
+.cart-popup-box h1 {
+  color: #fff;
+}
+
+.cart-popup-box p {
+  color: #fff;
+}
+
+.popup-product-image {
+
+  max-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-product-image img {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.popup-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 2rem;
+
+}
+
+.popup-buttons button {
+  padding: .5rem .5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  transition: background-color 0.2s ease;
+  font-family: 'poppins';
+  border: 1px solid white;
+  background: none;
+ 
+}
+
+.popup-buttons button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Popup Progress Bar */
+.popup-progress-bar {
+  height: 4px;
+  background: #00c853;
+  width: 0%;
+  border-radius: 2px;
+  margin-top: 1rem;
+}
+
+.popup-progress-bar.animate {
+  animation: fillBar 10s linear forwards;
+}
+
+@keyframes fillBar {
+  from { width: 0%; }
+  to { width: 100%; }
+}

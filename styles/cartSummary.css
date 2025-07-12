@@ -1,0 +1,51 @@
+.cart-confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.cart-confirm-box {
+  background: rgb(95, 95, 95);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.cart-confirm-box p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.popup-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.popup-buttons button {
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#confirm-clear {
+  background-color: #dc3545;
+  color: white;
+}
+
+#cancel-clear {
+  background-color: #20629c;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}

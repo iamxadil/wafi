@@ -1,0 +1,37 @@
+@import '../index/index.css';
+@import '../styles/bg.css';
+
+.mob-headphones-section {
+  display: none;
+}
+
+.explore-bg {
+  height: 120vh;
+  width: 100vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.explore-bg img {
+  width: 2000px;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  .explore-bg img {
+    width: 1250px;
+    top: 30%;
+  }
+}
+@media (max-width: 820px) {
+  .mob-headphones-section {
+    display: flex;
+  }
+  .audios-cards {
+    display: none;
+  }
+}
