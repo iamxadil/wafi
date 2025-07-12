@@ -10,7 +10,7 @@ function injectSideMenu() {
 
         <div class="non-toggle">
           <h1><i class="bi bi-house"></i></h1>
-          <h1 class="side home"><a href="../index/index.html" style="color: white; text-decoration: none;">Home</a></h1>
+          <h1 class="side home"><a href="/index.html" style="color: white; text-decoration: none;">Home</a></h1>
         </div>
 
         <!-- Products -->

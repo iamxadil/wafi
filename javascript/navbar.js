@@ -11,7 +11,7 @@ function initNavbar() {
   navbar.innerHTML = `
     <div class="navbar-container">
       <div class="navbar-left">
-        <a href="../index/index.html">
+        <a href="/index.html">
           <img src="../assets/Icons/wafi-logo-outline.svg" alt="logo" class="navbar-logo" />
         </a>
         <h1 id="login-icon">
@@ -30,7 +30,7 @@ function initNavbar() {
 
       <div class="navbar-right">
         <h1 class="home">
-          <a href="../index/index.html" class="home-button" style="color: black;">Home</a>
+          <a href="/index.html" class="home-button" style="color: black;">Home</a>
         </h1>
 
         <!-- Laptops Dropdown -->
