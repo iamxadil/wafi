@@ -11,16 +11,16 @@ function initNavbar() {
   navbar.innerHTML = `
     <div class="navbar-container">
       <div class="navbar-left">
-        <a href="/index.html">
-          <img src="../assets/Icons/wafi-logo-outline.svg" alt="logo" class="navbar-logo" />
+        <a href="index.html">
+          <img src="assets/Icons/wafi-logo-outline.svg" alt="logo" class="navbar-logo" />
         </a>
         <h1 id="login-icon">
-          <a href="../product/product.html">
+          <a href=" product/product.html">
             <i class="bi bi-person" style="color: #000;"></i>
           </a>
         </h1>
         <h1>
-          <a href="../cart/cart.html" style="position: relative;">
+          <a href="cart/cart.html" style="position: relative;">
             <i class="bi bi-cart" style="color: #000;"></i>
             <span class="cart-count-badge" id="cart-count">0</span>
           </a>
@@ -36,7 +36,7 @@ function initNavbar() {
         <!-- Laptops Dropdown -->
         <div class="dropdown nav-dropdown">
           <h1 class="nav-link">
-            <a href="../laptops/laptops.html" style="color: black;">Laptops</a>
+            <a href="laptops/laptops.html" style="color: black;">Laptops</a>
           </h1>
           <ul class="dropdown-menu">
             <li><a href="/category/category.html?brand=Asus">Asus</a></li>
@@ -52,16 +52,16 @@ function initNavbar() {
         <!-- Accessories Dropdown -->
         <div class="dropdown nav-dropdown">
           <h1 class="nav-link">
-            <a href="../accessories/accessories.html" style="color: black;">Accessories</a>
+            <a href="accessories/accessories.html" style="color: black;">Accessories</a>
           </h1>
           <ul class="dropdown-menu">
-            <li><a href="/category/category.html?category=Cooling Pads & Stands">Cooling Pads & Stands</a></li>
-            <li><a href="/category/category.html?category=Bags">Bags</a></li>
-            <li><a href="/category/category.html?category=COMBO">COMBO</a></li>
-            <li><a href="/headphones/headphones.html">Headphones</a></li>
-            <li><a href="/category/category.html?category=Speakers">Speakers</a></li>
-            <li><a href="/category/category.html?category=Microphones">Microphones</a></li>
-            <li><a href="/category/category.html?category=Other">Other</a></li>
+            <li><a href="category/category.html?category=Cooling Pads & Stands">Cooling Pads & Stands</a></li>
+            <li><a href="category/category.html?category=Bags">Bags</a></li>
+            <li><a href="category/category.html?category=COMBO">COMBO</a></li>
+            <li><a href="headphones/headphones.html">Headphones</a></li>
+            <li><a href="category/category.html?category=Speakers">Speakers</a></li>
+            <li><a href="category/category.html?category=Microphones">Microphones</a></li>
+            <li><a href="category/category.html?category=Other">Other</a></li>
           </ul>
         </div>
 
@@ -69,16 +69,16 @@ function initNavbar() {
         <div class="dropdown nav-dropdown">
           <h1 class="nav-link">Products & Services</h1>
           <ul class="dropdown-menu">
-            <li><a href="/category/category.html?category=UPS">UPS</a></li>
-            <li><a href="/category/category.html?category=Network">Network</a></li>
-            <li><a href="/category/category.html?category=Audios">Audios</a></li>
-            <li><a href="/category/category.html?category=RAM & Storage">RAM & Storage</a></li>
-            <li><a href="/category/category.html?category=USB Drives">USB Drives</a></li>
+            <li><a href="category/category.html?category=UPS">UPS</a></li>
+            <li><a href="category/category.html?category=Network">Network</a></li>
+            <li><a href="category/category.html?category=Audios">Audios</a></li>
+            <li><a href="category/category.html?category=RAM & Storage">RAM & Storage</a></li>
+            <li><a href="category/category.html?category=USB Drives">USB Drives</a></li>
           </ul>
         </div>
 
         <h1>
-          <a href="../contact/contact.html" style="color: #000;">Contact</a>
+          <a href="contact/contact.html" style="color: #000;">Contact</a>
         </h1>
 
         <div class="menu-toggle-btn">

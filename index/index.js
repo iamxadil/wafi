@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCartCountBadge();
     injectBackButton();
     initCategoryPage();
-      initMainSearch();
+    initMainSearch();
 
 
     // Run cart page init only if cart-wrapper container is present on page
