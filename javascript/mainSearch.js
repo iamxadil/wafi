@@ -11,7 +11,7 @@ async function initMainSearch() {
 
   let products = [];
   try {
-    const res = await fetch('json/products.json');
+    const res = await fetch('/wafi/json/products.json');
     if (!res.ok) throw new Error('Failed to fetch products');
     products = await res.json();
   } catch (err) {

@@ -12,10 +12,10 @@ function initNavbar() {
     <div class="navbar-container">
       <div class="navbar-left">
         <a href="index.html">
-          <img src="assets/Icons/wafi-logo-outline.svg" alt="logo" class="navbar-logo" />
+          <img src="../assets/Icons/wafi-logo-outline.svg" alt="logo" class="navbar-logo" />
         </a>
         <h1 id="login-icon">
-          <a href=" product/product.html">
+          <a href=" ../product/product.html">
             <i class="bi bi-person" style="color: #000;"></i>
           </a>
         </h1>
