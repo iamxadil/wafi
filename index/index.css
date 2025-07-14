@@ -5,6 +5,7 @@
 @import '../styles/product-header.css';
 @import '../styles/pc-cards.css';
 @import '../styles/cart-popup.css';
+
 .search-results {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   border-radius: 4px;

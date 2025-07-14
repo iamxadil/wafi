@@ -14,7 +14,7 @@ export async function initCategoryPage() {
 
   async function fetchProducts() {
     try {
-      const response = await fetch('../json/products.json'); // adjust path
+      const response = await fetch('/json/products.json'); // adjust path
       if (!response.ok) throw new Error('Failed to fetch products');
       const data = await response.json();
       return data;

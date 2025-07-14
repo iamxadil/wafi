@@ -1,85 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./laptops.css">
-    <title>Awlafi Company</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="icon" type="image/x-icon" href="Assests/Icons/wafi-logo-filled.svg">
-    <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="/index/index.js" defer type="module"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Awlafi Company</title>
+
+  <!-- CSS is root relative -->
+  <link rel="stylesheet" href="/laptops/laptops.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+  <link rel="icon" type="image/x-icon" href="/assets/Icons/wafi-logo-filled.svg" />
+  <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+  
+  <script src="/index/index.js" defer type="module"></script>
 </head>
 <body>
 
-    <!--Preloader-->
-    <div id="preloader">
-        <!---Injected through JS-->
-    </div>
+  <!--Preloader-->
+  <div id="preloader">
+    <!---Injected through JS-->
+  </div>
 
+  <!---Side Menu Toggling-->
+  <div id="side-menu" class="side-menu">
+    <!--Injected through JS-->
+  </div>
 
-    <!---Side Menu Toggling-->
-    <div id="side-menu" class="side-menu">
-        <!--Injected through JS-->
-    </div>
+  <!---Nav Bar-->
+  <nav id="navbar">
+    <!--Injected through JS-->
+  </nav>
 
-
-    <!---Nav Bar-->
-    <nav id="navbar">
-        <!--Injected through JS-->
-    </nav>
-
-
-    <!----PC Version-->
-    <div class="pc-only">
-        
+  <!----PC Version-->
+  <div class="pc-only">
+    
         <div class="container">
-
-            <!--Background-->
+            <!--Snail BG-->
             <div class="snail-shape">
-            <img src="../assets/Images/Snail-Shape.png" alt="snail" class="snail">
-             </div>
+            <img src="/assets/Images/Snail-Shape.png" alt="snail" class="snail">
+        </div>
 
-            <!--Laptop-->
+            <!--Laptop Section-->
             <div class="laptop-bg">
-                <div class="bg-screen" ></div>
-                <img src="../assets/Images/Strix.png" alt="laptop" class="laptop-image" >
+                <div class="bg-screen"></div>
+                <img src="/assets/Images/Strix.png" alt="laptop" class="laptop-image">
 
                  <div class="laptops-universe">
-                <h1>Laptops Universe 🚀</h1>
+                <h1>Laptops Universe</h1>
 
                 <p>We Provide The Best Services in The Country.<br>
                 Explore Our Laptops Collection and Find The Perfect One For You.
                 </p>
 
-                 <p id="last-par"><span>Efficiency and Productivity .</span> Click To Scroll Down To Our Inventory</p>
+                 <p id="last-par"><span>Efficiency and Productivity.</span> Click To Scroll Down To Our Inventory</p>
 
-                <button class="explore-button search-button" onclick="document.querySelector('.laptops-cards').scrollIntoView({ behavior: 'smooth' });">
+                <button class="explore-button search-button" onclick="document.querySelector('.pc-cards-container').scrollIntoView({ behavior: 'smooth' });">
                     <i class="lni lni-scroll-down-2 icon"></i>
                     <h1>EXPLORE</h1>
                 </button>
-                        </div>
-                        </div>
-                        </div>
+        </div>
+            </div>
+        </div>
 
+      </div>
 
+      <!---Product Header-->
+      <div class="product-header laptops-cards-title"></div>
 
-                                    <!---Product Header-->
-                        <div class="product-header laptops-cards-title" >
-                        </div>
-
-                        <!---Acessories Products Cards-->
-                        <div class="product-cards pc-cards-container laptops-cards" >
-                            <!--Injected through JS-->
-                        </div>
-
-
-                        
-                     </div>
-
-
+      <!---Laptops Products Cards-->
+      <div class="product-cards pc-cards-container laptops-cards">
+        <!--Injected through JS-->
+      </div>
+    </div>
+  </div>
 </body>
+</html>

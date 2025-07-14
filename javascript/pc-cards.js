@@ -5,7 +5,7 @@ import { initDarkMode } from "../javascript/theme.js";
 
 async function fetchAndRenderPCCards() {
   try {
-    const response = await fetch('/wafi/json/products.json');
+    const response = await fetch('/json/products.json');
     if (!response.ok) throw new Error('Failed to fetch products');
 
     const products = await response.json();
