@@ -1,0 +1,68 @@
+.back-btn-container {
+  position: fixed;
+  top: 110px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  color: #222;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  animation: fadeInSlide 0.5s ease-out;
+  margin-left: 2rem;
+  z-index: 1  ;
+}
+
+.back-btn-container:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.04);
+}
+
+.back-btn-container i {
+  font-size: 1.2rem;
+}
+
+.back-btn-container h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Appearance animation */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .back-btn-container {
+    top: 85px;
+    left: 10px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+    gap: 8px;
+  }
+
+  .back-btn-container h2 {
+    font-size: 1rem;
+  }
+
+  .back-btn-container i {
+    font-size: 1rem;
+  }
+}

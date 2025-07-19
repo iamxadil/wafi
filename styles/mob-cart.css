@@ -1,0 +1,152 @@
+
+.mob-only {
+    display: none;
+}
+
+@media (max-width: 820px) {
+    
+  .mob-only {
+        display: inline;
+    }
+  .back-btn {
+    margin-left: 0.5rem;
+  }
+  .back-btn i {
+    font-size: 32px;
+  }
+  
+  .mob-pr-cart {
+    padding: 0 1.5rem 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden !important;
+    height: calc(80vh - 90px);
+    padding-top: 2rem;
+  }
+  .title {
+    align-items: start;
+    width: 100%;
+  }
+  .title h1 {
+    font-size: 28px;
+  }
+  .mob-pr-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 60vh;
+    margin-top: 1rem;
+    gap: 2rem;
+    padding: 1rem 0 1rem 0;
+    flex: 1 1 auto;
+    min-height: 20vh;
+    overflow: auto;
+    scroll-behavior: smooth;
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+  }
+  .mob-pr-card-container::-webkit-scrollbar {
+    display: none;
+  }
+  .pr-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    height: 100px;
+    width: 100%;
+    scroll-snap-align: start;
+  }
+  .pr-cart-img {
+    height: 120px;
+    padding: 1px;
+    border: 1px solid black;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .pr-cart-img img {
+    width: 125px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .pr-cart-details {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    flex: 1;
+  }
+  .pr-cart-details .pr-name h1 {
+    font-size: 18px;
+    min-width: 100px;
+  }
+  .pr-cart-details p {
+    font-size: 14px;
+  }
+  .quantity-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .quantity-selector .increase-btn, .quantity-selector .decrease-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    height: 25px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+  }
+  .checkout-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 1.8rem 1rem 1.8rem;
+    gap: 1rem;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .checkout-container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    left: 0;
+    z-index: -1;
+  }
+  .deliv, .total {
+    display: flex;
+    justify-content: space-between;
+  }
+
+ 
+  button {
+    padding: 12px;
+    border-radius: 6px;
+    background: none;
+    outline: none;
+    border: 1px solid black;
+    font-size: 1rem;
+    font-family: "poppins";
+    transition: all 0.3s ease-in-out;
+  }
+  button:hover {
+    background: rgb(146, 146, 146) !important;
+  }
+}

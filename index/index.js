@@ -9,7 +9,15 @@ import { initCartCountBadge } from "../javascript/cartCount.js";
 import { injectBackButton } from "../javascript/backButton.js";
 import { initCategoryPage } from '../javascript/category.js';  
 import { initMainSearch } from '../javascript/mainSearch.js';
-
+import { injectMobileSearch } from "../javascript/mobSearch.js";
+import { injectMobileSlider } from "../javascript/mobSilder.js";
+import { fetchAndRenderMobCards } from "../javascript/mobCards.js";
+import { fetchAndRenderMostPopular } from "../javascript/mostPopular.js";
+import { injectSectionSliders } from "../javascript/sectionSlider.js";
+import { fetchAndRenderCategoryProducts } from "../javascript/renderMobCategory.js";
+import { renderOffers } from "../javascript/offers.js";
+import { initContact } from "../javascript/contactRender.js";
+import { initMobCategoryPage } from "../javascript/mobCatRender.js";
 
 // Import cart page init (only runs on cart page)
 import { initCartPage } from "../javascript/cartPage.js";
@@ -17,16 +25,24 @@ import { initCartPage } from "../javascript/cartPage.js";
 document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
     initSideMenu();
+    initContact();
     initDarkMode();
     initPreloader();
     injectProductHeaders();
     fetchAndRenderPCCards();
+    fetchAndRenderMobCards();
+    fetchAndRenderMostPopular();
     initPopup();
     initCartCountBadge();
     injectBackButton();
     initCategoryPage();
     initMainSearch();
-
+    injectMobileSearch();
+    injectMobileSlider();
+    injectSectionSliders();
+    fetchAndRenderCategoryProducts();
+    renderOffers();
+    initMobCategoryPage();
 
     // Run cart page init only if cart-wrapper container is present on page
     if (document.querySelector('#cart-items-container')) {

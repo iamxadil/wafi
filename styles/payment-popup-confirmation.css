@@ -1,0 +1,82 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.popup-overlay.hidden {
+  display: none;
+}
+
+.popup-content {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem 3.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  text-align: center;
+  max-width: 360px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.popup-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.8rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.popup-buttons button {
+  flex: 1;
+  padding: 0.65rem 0;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.25);
+  font-size: 1rem;
+}
+
+#confirm-order {
+  background: #4caf50;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+#confirm-order:hover {
+  background: #3b8e40;
+  box-shadow: 0 6px 20px rgba(59, 142, 64, 0.7);
+}
+
+#cancel-order {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+#cancel-order:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #000;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.6);
+}

@@ -1,6 +1,7 @@
 @import '../index/index.css';
 @import '../styles/back-btn.css';
 @import '../styles/cartSummary.css';
+@import '../styles/mob-cart.css';
 
 /* Reset and base styles */
 * {
@@ -190,3 +191,4 @@ h3 {
     gap: 1rem;
   }
 }
+

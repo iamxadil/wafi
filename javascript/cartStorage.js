@@ -15,11 +15,21 @@ function addItem(product) {
   if (existing) {
     existing.quantity++;
   } else {
-    items.push({ ...product, quantity: 1 });
+    // Ensure brand is preserved, even if undefined
+    const newItem = {
+      name: product.name,
+      image: product.image,
+      priceRaw: product.priceRaw,
+      priceDisplay: product.priceDisplay,
+      brand: product.brand || ' ',  // ✅ Add brand here
+      quantity: 1
+    };
+    items.push(newItem);
   }
 
   setCartItems(items);
 }
+
 
 function updateQuantity(name, delta) {
   let items = getCartItems();

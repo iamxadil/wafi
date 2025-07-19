@@ -1,6 +1,6 @@
 function debounce(fn, delay = 300) {
   let timeout;
-  return function(...args) {
+  return function (...args) {
     clearTimeout(timeout);
     timeout = setTimeout(() => fn.apply(this, args), delay);
   };
@@ -8,8 +8,8 @@ function debounce(fn, delay = 300) {
 
 async function initMainSearch() {
   const containers = document.querySelectorAll('.main-search-container');
-
   let products = [];
+
   try {
     const res = await fetch('/json/products.json');
     if (!res.ok) throw new Error('Failed to fetch products');
@@ -38,64 +38,63 @@ async function initMainSearch() {
       container.appendChild(resultsContainer);
     }
 
-    let currentIndex = -1; // for keyboard navigation
+    let currentIndex = -1;
 
-   function renderResults(matched) {
-  if (matched.length === 0) {
-    resultsContainer.innerHTML = `<p style="padding: 8px; margin: 0;">No results found.</p>`;
-    currentIndex = -1;
-    return;
-  }
-
-  resultsContainer.innerHTML = matched.map((p, idx) => `
-    <div 
-      class="search-result-item" 
-      role="option"
-      tabindex="-1"
-      data-index="${idx}"
-      style="display: flex; align-items: center; gap: 10px; padding: 8px; cursor: pointer; border-bottom: 1px solid #eee;"
-    >
-      <img src="${p.image}" alt="${p.name}" style="width: 40px; height: 40px; object-fit: contain; border-radius: 4px;" />
-      <div>
-        <div style="font-weight: 600;">${p.name}</div>
-        <div style="color: #666; font-size: 0.85rem;">${p.priceDisplay}</div>
-      </div>
-    </div>
-  `).join('');
-
-  currentIndex = -1;
-
-  const items = resultsContainer.querySelectorAll('.search-result-item');
-  
-  items.forEach(itemEl => {
-    itemEl.addEventListener('click', () => {
-      const productName = itemEl.querySelector('div > div:first-child').textContent.trim();
-      const product = products.find(p => p.name === productName);
-      if (product) {
-        const urlName = encodeURIComponent(product.name);
-        window.location.href = `../product/product.html?name=${urlName}`;
+    function renderResults(matched) {
+      if (matched.length === 0) {
+        resultsContainer.innerHTML = `<p style="padding: 8px; margin: 0;">No results found.</p>`;
+        currentIndex = -1;
+        return;
       }
-    });
 
-    itemEl.addEventListener('mouseenter', () => {
-      updateFocus(items, parseInt(itemEl.dataset.index));
-    });
-  });
-}
+      resultsContainer.innerHTML = matched.map((p, idx) => `
+        <div 
+          class="search-result-item" 
+          role="option"
+          tabindex="-1"
+          data-index="${idx}"
+          style="display: flex; align-items: center; gap: 10px; padding: 8px; cursor: pointer; border-bottom: 1px solid #eee;">
+          <img src="${p.image}" alt="${p.name}" style="width: 40px; height: 40px; object-fit: contain; border-radius: 4px;" />
+          <div>
+            <div style="font-weight: 600;">${p.name}</div>
+            <div style="color: #666; font-size: 0.85rem;">${p.priceDisplay}</div>
+          </div>
+        </div>
+      `).join('');
 
-function updateFocus(items, index) {
-  items.forEach((item, i) => {
-    if (i === index) {
-      item.style.backgroundColor = '#f0f0f0';
-      item.setAttribute('aria-selected', 'true');
-      item.scrollIntoView({ block: 'nearest' });
-    } else {
-      item.style.backgroundColor = '';
-      item.setAttribute('aria-selected', 'false');
+      currentIndex = -1;
+
+      const items = resultsContainer.querySelectorAll('.search-result-item');
+      items.forEach(itemEl => {
+        itemEl.addEventListener('click', () => {
+          const productName = itemEl.querySelector('div > div:first-child').textContent.trim();
+          const product = products.find(p => p.name === productName);
+          if (product) {
+            // ✅ Store selected product in localStorage before redirecting
+            localStorage.setItem('selectedProduct', JSON.stringify(product));
+            const urlName = encodeURIComponent(product.name);
+            window.location.href = `/product/product.html?name=${urlName}`;
+          }
+        });
+
+        itemEl.addEventListener('mouseenter', () => {
+          updateFocus(items, parseInt(itemEl.dataset.index));
+        });
+      });
     }
-  });
-}
 
+    function updateFocus(items, index) {
+      items.forEach((item, i) => {
+        if (i === index) {
+          item.style.backgroundColor = '#f0f0f0';
+          item.setAttribute('aria-selected', 'true');
+          item.scrollIntoView({ block: 'nearest' });
+        } else {
+          item.style.backgroundColor = '';
+          item.setAttribute('aria-selected', 'false');
+        }
+      });
+    }
 
     const debouncedSearch = debounce(() => {
       const query = input.value.trim().toLowerCase();
@@ -112,7 +111,7 @@ function updateFocus(items, index) {
 
     input.addEventListener('input', debouncedSearch);
 
-    input.addEventListener('keydown', (e) => {
+    input.addEventListener('keydown', e => {
       const items = resultsContainer.querySelectorAll('.search-result-item');
       if (items.length === 0) return;
 
@@ -133,19 +132,6 @@ function updateFocus(items, index) {
         resultsContainer.style.display = 'none';
       }
     });
-
-    function updateFocus(items, index) {
-      items.forEach((item, i) => {
-        if (i === index) {
-          item.style.backgroundColor = '#f0f0f0';
-          item.setAttribute('aria-selected', 'true');
-          item.scrollIntoView({ block: 'nearest' });
-        } else {
-          item.style.backgroundColor = '';
-          item.setAttribute('aria-selected', 'false');
-        }
-      });
-    }
 
     document.addEventListener('click', e => {
       if (!container.contains(e.target)) {

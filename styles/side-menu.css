@@ -169,7 +169,6 @@
 
 @media (max-width: 900px) {
   .products-toggle h1, .non-toggle h1 {
-    background-color: aquamarine;
     font-size: clamp(24px, 2vw, 38px);
     
   }

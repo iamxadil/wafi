@@ -1,18 +1,27 @@
 [
+{
+  "id": 1,
+  "name": "Asus Vivobook 15",
+  "priceDisplay": "900,000 IQD",
+  "priceRaw": 900000,
+  "image": ["/assets/Images/laptop-img.png"],
+  "sku": "ASV15",
+  "brand": "Asus",
+  "color": "black",
+  "form": "Laptop",
+  "category": "Asus",
+  "section": "Laptops",
+  "cpu": "Intel Core i5",
+  "ram": "8GB",
+  "storage": "256GB SSD",
+  "descriptionList": [
+    "Wireless 2.4GHz USB connectivity",
+    "Ergonomic grip with silent clicks",
+    "Rechargeable 600mAh battery",
+    "Works with Windows/macOS/Linux"
+  ]
+},
 
-  {
-    "id": 1,
-    "name": "Asus Vivobook 15",
-    "priceDisplay": "900,000 IQD",
-    "priceRaw": 900000,
-    "image": ["/assets/Images/laptop-img.png"],
-    "sku": "ASV15",
-    "brand": "Asus",
-    "color": "black",
-    "form": "Laptop",
-    "category": "Asus",
-    "section": "Laptops"
-  },
   {
     "id": 2,
     "name": "Asus ZenBook 14",
@@ -21,37 +30,78 @@
     "image": ["/assets/Images/laptop-img.png"],
     "sku": "AZB14",
     "brand": "Asus",
-    "color": "silver",
+    "color": "Silver",
     "form": "Laptop",
-    "category": "Asus",
-    "section": "Laptops"
+    "category": "Laptops",
+    "section": "Laptops",
+    "cpu": "Intel Core i7-1165G7",
+    "ram": "16GB",
+    "storage": "1TB SSD",
+    "screen": "14'' OLED",
+    "gpu": "Intel Iris Xe",
+    "inStock": true,
+    "battery": "4000mAh",
+    "descriptionList": [
+    "Wireless 2.4GHz USB connectivity",
+    "Ergonomic grip with silent clicks",
+    "Rechargeable 600mAh battery",
+    "Works with Windows/macOS/Linux"
+  ]
   },
-  {"id": 3,
+  {
+    "id": 3,
     "name": "Asus ROG Strix G15",
     "priceDisplay": "1,500,000 IQD",
     "priceRaw": 1500000,
     "image": ["/assets/Images/laptop-img.png", "/assets/Images/Strix.png"],
     "sku": "ASRG15",
     "brand": "Asus",
-    "color": "black-red",
+    "color": "Black-Red",
     "form": "Laptop",
-    "category": "Asus",
+    "category": "Laptops",
     "section": "Laptops",
-    "inStock": true
+    "cpu": "AMD Ryzen 7 4800H",
+    "ram": "16GB",
+    "storage": "512GB SSD",
+    "screen": "15.6'' 144Hz",
+    "gpu": "NVIDIA RTX 3050",
+    "inStock": true,
+    "battery": "6000mAh",
+    "descriptionList": [
+    "Wireless 2.4GHz USB connectivity",
+    "Ergonomic grip with silent clicks",
+    "Rechargeable 600mAh battery",
+    "Works with Windows/macOS/Linux"
+  ]
   },
-  {  "id": 4,
+  {
+    "id": 4,
     "name": "DELL Precision 5550",
     "priceDisplay": "2,900,000 IQD",
     "priceRaw": 2900000,
     "image": ["/assets/Images/laptop-img.png"],
     "sku": "DELL-P5550",
     "brand": "DELL",
-    "color": "black",
+    "color": "Black",
     "form": "Laptop",
-    "category": "DELL",
-    "section": "Laptops"
+    "category": "Laptops",
+    "section": "Laptops",
+    "cpu": "Intel Xeon W-10855M",
+    "ram": "32GB",
+    "storage": "1TB SSD",
+    "screen": "15.6'' UHD+ Touch",
+    "gpu": "NVIDIA Quadro T2000",
+    "inStock": true,
+    "battery": "4000mAh",
+    "descriptionList": [
+    "Wireless 2.4GHz USB connectivity",
+    "Ergonomic grip with silent clicks",
+    "Rechargeable 600mAh battery",
+    "Works with Windows/macOS/Linux"
+  ]
   },
-   { "id": 5,
+  {
+    "id": 5,
     "name": "Logitech Wireless Mouse",
     "priceDisplay": "35,000 IQD",
     "priceRaw": 35000,
@@ -61,9 +111,19 @@
     "color": "Black",
     "form": "Mouse",
     "category": "Mice",
-    "section": "Accessories"
+    "section": "Accessories",
+    "connectivity": "2.4GHz Wireless",
+    "battery": "Rechargeable 600mAh",
+    "features": "Ergonomic, Silent Clicks",
+    "descriptionList": [
+    "Wireless 2.4GHz USB connectivity",
+    "Ergonomic grip with silent clicks",
+    "Rechargeable 600mAh battery",
+    "Works with Windows/macOS/Linux"
+  ]
   },
-  {  "id": 6,
+  {
+    "id": 6,
     "name": "HP Wired Keyboard",
     "priceDisplay": "25,000 IQD",
     "priceRaw": 25000,
@@ -73,21 +133,43 @@
     "color": "Black",
     "form": "Keyboard",
     "category": "Keyboards",
-    "section": "Accessories"
+    "section": "Accessories",
+    "type": "Wired",
+    "layout": "QWERTY",
+    "switchType": "Membrane",
+    "backlight": "No",
+    "descriptionList": [
+    "Wireless 2.4GHz USB connectivity",
+    "Ergonomic grip with silent clicks",
+    "Rechargeable 600mAh battery",
+    "Works with Windows/macOS/Linux"
+  ]
   },
-  { "id": 7,
+  {
+    "id": 7,
     "name": "Gaming Headset GX1",
     "priceDisplay": "75,000 IQD",
     "priceRaw": 75000,
-    "image": ["/Assets/Images/gaming-headset.png"],
+    "image": ["/Assets/Images/headset.png", "/assets/images/Headphone.png"],
     "sku": "GXHS001",
     "brand": "GX Tech",
     "color": "Black-Red",
     "form": "Headphones",
     "category": "Headphones",
-    "section": "Accessories"
+    "section": "Accessories",
+    "type": "Over-Ear",
+    "connectivity": "3.5mm Wired",
+    "battery": "None",
+    "noiseCancellation": "Passive",
+    "descriptionList": [
+    "Wireless 2.4GHz USB connectivity",
+    "Ergonomic grip with silent clicks",
+    "Rechargeable 600mAh battery",
+    "Works with Windows/macOS/Linux"
+  ]
   },
-  { "id": 8,
+  {
+    "id": 8,
     "name": "Asus Laptop Bag",
     "priceDisplay": "45,000 IQD",
     "priceRaw": 45000,
@@ -97,6 +179,17 @@
     "color": "Grey",
     "form": "Bag",
     "category": "Bags",
-    "section": "Accessories"
+    "section": "Accessories",
+    "size": "15.6''",
+    "material": "Polyester",
+    "compartments": "3",
+    "descriptionList": [
+    "Wireless 2.4GHz USB connectivity",
+    "Ergonomic grip with silent clicks",
+    "Rechargeable 600mAh battery",
+    "Works with Windows/macOS/Linux"
+  ]
   }
+
+  
 ]

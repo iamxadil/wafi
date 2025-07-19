@@ -73,13 +73,17 @@ function attachAddToCartListeners() {
 
     const product = {
       name: card.dataset.name,
-      priceDisplay: card.querySelector('.pc-product-price')?.textContent || '',
+      priceDisplay:
+        card.querySelector('.pc-product-price')?.textContent ||
+        card.querySelector('.mob-item-price')?.textContent ||
+        '',
       image: card.querySelector('img')?.src || ''
     };
     
     showCartPopup(product);
   });
 }
+
 
 function initPopup() {
   injectCartPopup();
@@ -94,4 +98,4 @@ function initPopup() {
   });
 }
 
-export { initPopup };
+export { initPopup, showCartPopup };

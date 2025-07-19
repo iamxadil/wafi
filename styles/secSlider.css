@@ -1,0 +1,32 @@
+.sections-slider {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 0 2.5rem 0 2rem;
+    margin-top: 2rem;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    /* Hide scrollbar for Webkit browsers */
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .sections-slider::-webkit-scrollbar {
+    display: none;
+  }
+  .sec-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px 4px 12px;
+    border: 1px solid #000;
+    border-radius: 2rem;
+    scroll-snap-align: start;
+  }
+  .sec-slide:hover {
+    background-color: #888;
+    color: #fff;
+  }

@@ -1,5 +1,4 @@
 function initDarkMode() {
-
   const pageBody = document.querySelector('body');
   if (!pageBody) return;
 
@@ -10,7 +9,7 @@ function initDarkMode() {
   const applyDarkModeToPage = (isDark) => {
     const wafiLogos = document.querySelectorAll('.navbar-logo');
     const elements = {
-      texts: document.querySelectorAll('h1, h2, h3, h4, a, .bi-person, p, span, .name, .price, .cart-item, .quantity-controls, .remove-btn, i'),
+      texts: document.querySelectorAll('h1, h2, h3, h4, a, .bi-person, p, span, .name, .price, .cart-item, .quantity-controls, .remove-btn, i, li, strong'),
       allButtons: document.querySelectorAll('button'),
       allInputs: document.querySelectorAll('input'),
       theTwoBars: document.querySelectorAll('.first-bar, .second-bar'),
@@ -18,7 +17,8 @@ function initDarkMode() {
       citySelect: document.querySelector('#citySelect'),
       contBorders: document.querySelectorAll('.cont-border'),
       sliderBorders: document.querySelectorAll('.slider-border'),
-      filterButton: document.querySelector('.filter-button')
+      filterButton: document.querySelector('.filter-button'),
+      paginationButtons: document.querySelectorAll('.pagination-btn') // NEW
     };
     const dotsContainer = document.querySelector('.hot-slider-dots');
     const dots = document.querySelectorAll('.hot-slider-dots .hot-dot');
@@ -44,14 +44,16 @@ function initDarkMode() {
         ? '/assets/Icons/wafi-logo-outline-white.svg'
         : '/assets/Icons/wafi-logo-outline.svg';
     });
+
+    // Toggle dark mode styles for pagination buttons
+    elements.paginationButtons.forEach(btn => btn.classList.toggle('dark-pagination-btn', isDark));
   };
 
   // Load preference and apply
   const saved = localStorage.getItem('darkMode') === 'true';
   applyDarkModeToPage(saved);
 
-
-     // Setup toggle listeners
+  // Setup toggle listeners
   document.querySelectorAll('.dark-mode').forEach(button => {
     button.addEventListener('click', () => {
       const isDark = !pageBody.classList.contains('dark-mode-style');
@@ -59,7 +61,6 @@ function initDarkMode() {
       applyDarkModeToPage(isDark);
     });
   });
- 
 }
 
-export { initDarkMode, };
+export { initDarkMode };

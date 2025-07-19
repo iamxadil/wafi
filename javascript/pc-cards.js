@@ -1,7 +1,6 @@
-
 import { initDarkMode } from "../javascript/theme.js";
-
-// pc-cards.js
+import { setupPagination } from "./pagination.js";
+import {initAddToCartTracking} from './trackPurchase.js';
 
 async function fetchAndRenderPCCards() {
   try {
@@ -12,16 +11,35 @@ async function fetchAndRenderPCCards() {
     const allProductContainers = document.querySelectorAll('.product-cards');
 
     allProductContainers.forEach(container => {
+      let filteredProducts = [];
+
       if (container.classList.contains('laptops-cards')) {
-        const laptops = products.filter(p => p.section === 'Laptops');
-        renderProducts(container, laptops);
+        filteredProducts = products.filter(p => p.section === 'Laptops');
       } else if (container.classList.contains('accessories-cards')) {
-        const accessories = products.filter(p => p.section === 'Accessories');
-        renderProducts(container, accessories);
+        filteredProducts = products.filter(p => p.section === 'Accessories');
       } else if (container.classList.contains('headphones-cards')) {
-        const audios = products.filter(p => p.section === 'Audios');
-        renderProducts(container, audios);
+        filteredProducts = products.filter(p => p.section === 'Audios');
+      } else {
+        filteredProducts = products;
       }
+
+      // Select the immediate next sibling pagination container
+      const paginationContainer = container.nextElementSibling;
+      if (!paginationContainer || !paginationContainer.classList.contains('pc-pagination')) {
+        console.warn('PC pagination container not found for', container);
+        return;
+      }
+
+      const itemsPerPage = 6;
+
+      setupPagination(
+        filteredProducts,
+        itemsPerPage,
+        (pageItems) => renderProducts(container, pageItems),
+        paginationContainer
+      );
+      
+       initAddToCartTracking('.product-cards');
     });
   } catch (err) {
     console.error('Error loading PC products:', err);
@@ -31,14 +49,12 @@ async function fetchAndRenderPCCards() {
 function renderProducts(container, products) {
   container.innerHTML = products.map(product => `
     <div class="pc-card product-card cont-border"
+         data-id="${product.id}"
          data-name="${product.name}"
          data-price="${product.priceRaw}"
-         data-brand="${product.brand}
-         onclick="viewProduct(${product.id})"
-         data-id="${product.id}">
-
+         data-brand="${product.brand}">
       <div class="pc-product-img">
-        <img src="${product.image}" alt="${product.name}">
+        <img src="${product.image[0]}" alt="${product.name}">
       </div>
 
       <div class="pc-product-details">
@@ -52,8 +68,22 @@ function renderProducts(container, products) {
       </div>
     </div>
   `).join('');
-    
-  initDarkMode(); // Reinitialize dark mode styles after rendering
+
+  container.querySelectorAll('.pc-card').forEach(card => {
+    card.addEventListener('click', e => {
+      if (e.target.closest('.add-to-cart')) return;
+
+      const productId = card.dataset.id;
+      const product = products.find(p => p.id == productId);
+      if (!product) return;
+
+      localStorage.setItem('selectedProduct', JSON.stringify(product));
+      window.location.href = '/product/product.html';
+    });
+  });
+
+ 
+  initDarkMode();
 }
 
 export { fetchAndRenderPCCards };

@@ -5,7 +5,13 @@
 @import '../styles/product-header.css';
 @import '../styles/pc-cards.css';
 @import '../styles/cart-popup.css';
-
+@import '../styles/mob-search.css';
+@import '../styles/mob-slider.css';
+@import '../styles//mob-cards.css';
+@import '../styles/pagination.css';
+@import '../styles/hearts.css';
+@import '../styles/secSlider.css';
+@import '../styles/offers.css';
 .search-results {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -31,6 +37,10 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.mob-only {
+  display: none;
 }
 
 .hero-section {
@@ -156,10 +166,39 @@ a {
   .pc-only {
     display: none !important;
   }
+  .pc-pagination {
+    display: none !important;
+  }
   #login-icon {
     display: none;
   }
   #product-header {
     display: none;
+  }
+  .navbar-spacer {
+    padding-top: 100px;
+  }
+  .mob-only {
+    display: block;
+  }
+  .head-line {
+    height: 100px;
+    padding: 0rem 2.5rem;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+  .heading-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 14px;
+  }
+  .heading-title i {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 430px) {
+  .head-title p {
+    margin-top: 12px;
   }
 }/*# sourceMappingURL=index.css.map */

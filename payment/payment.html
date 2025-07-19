@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/payment//payment.css">
+    <title>Awlafi Company</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="../Assests/Icons/wafi-logo-filled.svg">
+    <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="/index/index.js" defer type="module"></script>
+    <script src="/javascript/payment.js" defer type="module"></script>
+</head>
+<body>
+
+  <!--Preloader-->
+  <div id="preloader">
+    <!---Injected through JS-->
+  </div>
+
+    
+
+
+  <div class="payment-container">
+
+        <!---User Info-->
+        <div class="user-details">
+
+
+            <!---First & Second Name -->
+            <div class="input-box input-user-name">
+                <div class="input-first">
+                    <label for="input-first">First Name</label>
+                    <input type="text">
+                </div>
+                <div class="input-second">
+                    <label for="input-second">Second Name</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <!---Email -->
+            <div class="input-box input-email">
+                <label for="email">Email</label>
+                <input type="email">
+            </div>
+
+            <!--City And Address-->
+            <div class="input-box input-city-address">
+
+
+                <!--Choosing From Cities-->
+                <div class="city-input">
+                    <label for="city-input">City</label>
+                    <select id="citySelect" class="cont-border">
+                        <option value="0" disabled selected hidden></option>
+                        <option value="1">Baghdad</option>
+                        <option value="1">Babel</option>
+                        <option value="1">Basra</option>
+                        <option value="1">Mosul</option>
+                        <option value="1">Duhok</option>
+                        <option value="1">Erbil</option>
+                    </select>
+                </div>
+                
+                <!--Address-->
+                <div class="address-input">
+                    <label for="address-input">Address</label>
+                    <input type="text">
+                </div>
+
+            </div>
+
+            <!---Phone Number-->
+            <div class="input-box input-phone">
+                <label for="input-phone">Phone Number</label>
+                <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+            </div>
+
+            <!--Delivery and Payment Method-->
+            <div class="input-box input-delivery-method">
+                <!---Static Texts-->
+                <div class="delivery-box">
+                    <label for="delivery-box">Delivery</label>
+                    <div class="delivery-price cont-border">0.00 IQD</div>
+                </div>
+                <div class="pay-box">
+                    <label for="pay-box">Payment Method</label>
+                    <div class="pay-method cont-border">Cash</div>
+                </div>
+            </div>
+
+            <button id="place-order">Place Order</button>
+            
+        </div>
+
+
+        <!----Cart Items-->
+
+        <div class="cart-items">
+           
+          
+        </div>
+
+
+
+</body>

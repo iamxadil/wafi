@@ -4,18 +4,18 @@ function initNavbar() {
   const navbar = document.getElementById('navbar');
 
   if (!navbar) {
-    console.error("Navbar container not found!");
     return;
   }
 
   navbar.innerHTML = `
     <div class="navbar-container">
+
       <div class="navbar-left">
         <a href="/index.html">
           <img src="/assets/Icons/wafi-logo-outline.svg" alt="logo" class="navbar-logo" />
         </a>
         <h1 id="login-icon">
-          <a href="/product/product.html">
+          <a href="/login/login.html">
             <i class="bi bi-person" style="color: #000;"></i>
           </a>
         </h1>
@@ -25,6 +25,8 @@ function initNavbar() {
             <span class="cart-count-badge" id="cart-count">0</span>
           </a>
         </h1>
+
+        
         <h1 class="dark-mode"><i class="bi bi-moon dark-mode"></i></h1>
       </div>
 

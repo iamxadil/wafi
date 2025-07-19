@@ -1,0 +1,17 @@
+.highlight-better {
+  background-color: rgba(46, 204, 113, 0.15) !important;
+  border-left: 4px solid #2ecc71;
+  padding-left: 8px;
+}
+
+.highlight-worse {
+  background-color: rgba(231, 76, 60, 0.15) !important;
+  border-left: 4px solid #e74c3c;
+  padding-left: 8px;
+}
+
+.highlight-diff {
+  background: rgba(3, 117, 151, 0.08) !important;
+  border-left: 4px solid #000000;
+  padding-left: 8px;
+}

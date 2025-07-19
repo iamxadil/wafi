@@ -3,31 +3,6 @@ import { initDarkMode } from "./theme.js";
 let buttonsInitialized = false;
 
 function initCartSummary() {
-  function formatIQD(amount) {
-    return new Intl.NumberFormat('en-US').format(amount) + ' IQD';
-  }
-
-  function calculateCartTotal() {
-    const itemPrices = document.querySelectorAll('.item-price h3');
-    let subtotal = 0;
-
-    itemPrices.forEach(priceEl => {
-      const rawText = priceEl.textContent.replace(/[^\d]/g, '');
-      subtotal += parseInt(rawText) || 0;
-    });
-
-    const delivery = 5000;
-    const total = subtotal + delivery;
-
-    const subtotalEl = document.getElementById('subtotal');
-    const deliveryEl = document.getElementById('delivery-fee');
-    const totalEl = document.getElementById('total-price');
-
-    if (subtotalEl) subtotalEl.textContent = formatIQD(subtotal);
-    if (deliveryEl) deliveryEl.textContent = formatIQD(delivery);
-    if (totalEl) totalEl.textContent = formatIQD(total);
-  }
-
   function injectClearCartPopup() {
     if (document.getElementById('clear-cart-popup')) return;
 
@@ -71,22 +46,15 @@ function initCartSummary() {
     setupClearCartPopupActions();
 
     const clearBtn = document.getElementById('clear-cart');
-    const proceedBtn = document.getElementById('proceed-payment');
-
     if (clearBtn) {
       clearBtn.addEventListener('click', () => {
         document.getElementById('clear-cart-popup')?.classList.remove('hidden');
       });
     }
 
-    if (proceedBtn) {
-      proceedBtn.addEventListener('click', () => {
-        alert("Redirecting to payment gateway...");
-      });
-    }
+    // Proceed button logic is now handled in cartRenderer.js
   }
 
-  calculateCartTotal();
   setupActions();
   initDarkMode();
 }
