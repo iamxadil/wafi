@@ -1,3 +1,4 @@
+//Index.js
 import { initPreloader } from "../javascript/preloader.js";
 import { initSideMenu } from "../javascript/sideMenu.js";
 import { initNavbar } from "../javascript/navbar.js";
@@ -18,7 +19,15 @@ import { fetchAndRenderCategoryProducts } from "../javascript/renderMobCategory.
 import { renderOffers } from "../javascript/offers.js";
 import { initContact } from "../javascript/contactRender.js";
 import { initMobCategoryPage } from "../javascript/mobCatRender.js";
+import { injectAnimatedHeadText } from "../javascript/animatedHeadText.js";
+import { injectFooter } from '../javascript/footer.js';
+import {initMobAddToCart} from '../javascript/mobItemCards.js';
+import { initFiltering } from "../javascript/filterProducts.js";
+import { fetchAndRenderLaptopCards } from "../javascript/mobLaptops.js";
+import { fetchAndRenderAccessories } from "../javascript/mobAccessories.js";
+import { fetchAndRenderHeadphones
 
+ } from "../javascript/mobHeadphones.js";
 // Import cart page init (only runs on cart page)
 import { initCartPage } from "../javascript/cartPage.js";
 
@@ -29,9 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
     initDarkMode();
     initPreloader();
     injectProductHeaders();
+    injectAnimatedHeadText();
     fetchAndRenderPCCards();
     fetchAndRenderMobCards();
     fetchAndRenderMostPopular();
+    fetchAndRenderLaptopCards();
+    fetchAndRenderAccessories();
+    fetchAndRenderHeadphones();
     initPopup();
     initCartCountBadge();
     injectBackButton();
@@ -43,7 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchAndRenderCategoryProducts();
     renderOffers();
     initMobCategoryPage();
-
+    initPopup();
+    initMobAddToCart();
+    initFiltering();
+    injectFooter();
+    
     // Run cart page init only if cart-wrapper container is present on page
     if (document.querySelector('#cart-items-container')) {
       initCartPage();

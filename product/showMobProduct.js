@@ -1,4 +1,5 @@
 import { incrementCartCount } from '../javascript/cartCount.js';
+import { initDarkMode } from '../javascript/theme.js';
 
 export function initMobileProduct() {
   const product = JSON.parse(localStorage.getItem('selectedProduct'));
@@ -53,6 +54,7 @@ export function initMobileProduct() {
     </div>
   `;
 
+  
   // === Image Navigator Logic ===
   const images = Array.isArray(product.image) ? product.image : [product.image];
   let currentIndex = 0;
@@ -168,6 +170,8 @@ export function initMobileProduct() {
     } else {
       icon.className = 'bi bi-caret-right-fill';
     }
+
+      initDarkMode();
   });
 
   // === Compare with Toggle + Search ===
@@ -242,6 +246,8 @@ export function initMobileProduct() {
       compareToggleBtn.querySelector('i').className = 'bi bi-caret-right-fill';
     }
   });
+
+  
 }
 
 initMobileProduct();

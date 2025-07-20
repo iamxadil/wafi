@@ -1,4 +1,4 @@
-.discover-section, .most-popular-section, .category-section, .offers-section, .cat-section {
+.discover-section, .most-popular-section, .category-section, .offers-section, .cat-section,.newly-added-section {
      display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,3 +112,5 @@
     border-radius: 4px;
   }
 }
+
+

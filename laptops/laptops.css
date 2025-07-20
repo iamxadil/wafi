@@ -1,2 +1,12 @@
 @import "../index/index.css";
 @import '../styles/bg.css';
+@import '../styles/animated-head-text.css';
+
+
+.navbar-spacer {
+    padding-top: 80px ;
+}
+
+.search-section {
+    margin-top: 2rem;
+}

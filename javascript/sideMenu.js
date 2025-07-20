@@ -22,7 +22,7 @@ function injectSideMenu() {
           <div class="dropdown">
             <a href="../laptops/laptops.html" class="dropdown-item">Laptops</a>
             <a href="../accessories/accessories.html" class="dropdown-item">Accessories</a>
-            <a href="../audios/audios.html" class="dropdown-item">Headphones</a>
+            <a href="../headphones/headphones.html" class="dropdown-item">Headphones</a>
             <a href="#" class="dropdown-item">PCs</a>
           </div>
         </div>

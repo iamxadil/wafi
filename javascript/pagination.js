@@ -1,3 +1,4 @@
+//pagination.js
 function setupPagination(items, itemsPerPage, renderFunction, paginationContainer) {
   let currentPage = 1;
   const totalPages = Math.ceil(items.length / itemsPerPage);

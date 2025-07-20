@@ -1,4 +1,3 @@
-// cart.js (your main cart rendering and event handling file)
 import { getCartItems, updateQuantity, removeItem, setCartItems } from './cartStorage.js';
 import { initDarkMode } from './theme.js';
 import { setCartCount } from './cartCount.js';
@@ -138,11 +137,25 @@ function attachCartItemListeners(wrapper) {
     });
   }
 
+  // Custom popup handling
   const clearBtn = wrapper.querySelector('#clear-cart');
-  if (clearBtn) {
+  const popup = document.getElementById('cart-clear-popup');
+  const confirmBtn = document.getElementById('confirm-clear-cart');
+  const cancelBtn = document.getElementById('cancel-clear-cart');
+
+  if (clearBtn && popup && confirmBtn && cancelBtn) {
     clearBtn.addEventListener('click', () => {
+      popup.classList.remove('hidden');
+    });
+
+    confirmBtn.addEventListener('click', () => {
       setCartItems([]);
       renderCartItems(wrapper);
+      popup.classList.add('hidden');
+    });
+
+    cancelBtn.addEventListener('click', () => {
+      popup.classList.add('hidden');
     });
   }
 

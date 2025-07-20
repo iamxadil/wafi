@@ -1,3 +1,4 @@
+//trackPruchase.js
 function initAddToCartTracking(containerSelector = '.mob-items-container') {
   const container = document.querySelector(containerSelector);
   if (!container) return;

@@ -72,6 +72,21 @@ function renderMobProducts(container, products) {
       </div>
     </div>
   `).join('');
+
+  // Add click event listeners to each product card
+  const cards = container.querySelectorAll('.mob-item-card');
+  cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      const isHeart = e.target.closest('.heart');
+      const isCart = e.target.closest('.add-to-cart');
+
+      if (isHeart || isCart) return; // Don't redirect if heart/cart clicked
+
+      const productId = card.getAttribute('data-id');
+      window.location.href = `/product/product.html?id=${productId}`;
+    });
+  });
 }
+
 
 export { fetchAndRenderMostPopular };

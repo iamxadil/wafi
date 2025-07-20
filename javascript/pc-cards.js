@@ -1,3 +1,4 @@
+//pcCards.js
 import { initDarkMode } from "../javascript/theme.js";
 import { setupPagination } from "./pagination.js";
 import {initAddToCartTracking} from './trackPurchase.js';
@@ -18,7 +19,7 @@ async function fetchAndRenderPCCards() {
       } else if (container.classList.contains('accessories-cards')) {
         filteredProducts = products.filter(p => p.section === 'Accessories');
       } else if (container.classList.contains('headphones-cards')) {
-        filteredProducts = products.filter(p => p.section === 'Audios');
+        filteredProducts = products.filter(p => p.form === 'Headphones');
       } else {
         filteredProducts = products;
       }

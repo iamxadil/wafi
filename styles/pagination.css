@@ -1,5 +1,5 @@
 /* Shared container styling */
-.mob-pagination, .pc-pagination, .most-popular-pagination {
+.mob-pagination, .pc-pagination, .most-popular-pagination, .mob-laptops-pagination, .mob-accessories-pagination, .mob-headphones-pagination {
   display: flex;
   flex-wrap: wrap; /* allow wrapping on smaller screens */
   justify-content: center;

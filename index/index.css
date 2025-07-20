@@ -12,6 +12,7 @@
 @import '../styles/hearts.css';
 @import '../styles/secSlider.css';
 @import '../styles/offers.css';
+@import '../styles/copyright.css';
 .search-results {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
